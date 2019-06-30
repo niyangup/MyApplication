@@ -1,21 +1,21 @@
 package com.example.myapplication.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.activity.FrameActivity;
 
-import java.util.Timer;
-
-public class FrameFragment extends BaseFragment {
+public class FrameFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private ListView mListView;
     private String[] data = {"OKHttp", "xUtils3", "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava", "volley", "Gson", "FastJson", "picasso", "evenBus", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
@@ -26,7 +26,18 @@ public class FrameFragment extends BaseFragment {
 
         View view = View.inflate(mContext, R.layout.fragment_frame, null);
         mListView = (ListView) view.findViewById(R.id.list);
+
+        mListView.setOnItemClickListener(this);
         final SwipeRefreshLayout mSRefresh = (SwipeRefreshLayout) view.findViewById(R.id.sfl);
+
+
+        initSRefresh(mSRefresh);
+
+
+        return view;
+    }
+
+    private void initSRefresh(final SwipeRefreshLayout mSRefresh) {
         mSRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -39,13 +50,22 @@ public class FrameFragment extends BaseFragment {
                 }, 3000);
             }
         });
-        return view;
     }
 
     @Override
     public void initData() {
         super.initData();
         mListView.setAdapter(new MyAdapter());
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        TextView tv= (TextView) view;
+        if(i==0&&tv.getText().toString().equalsIgnoreCase("okhttp") ) {
+            Toast.makeText(mContext, "点击了第"+i+"个", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(mContext, FrameActivity.class);
+            startActivity(intent);
+        }
     }
 
     class MyAdapter extends BaseAdapter {
