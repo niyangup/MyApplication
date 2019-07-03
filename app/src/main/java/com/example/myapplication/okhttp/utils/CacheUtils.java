@@ -1,4 +1,4 @@
-package com.example.myapplication.utils;
+package com.example.myapplication.okhttp.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

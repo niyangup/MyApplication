@@ -23,8 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FrameActivity"/>
-        <activity android:name=".activity.OKHttpImageListActivity"/>
+        <activity android:name=".okhttp.activity.FrameActivity"/>
+        <activity android:name=".okhttp.activity.OKHttpImageListActivity"/>
+        <activity android:name=".json.activity.NativeJsonParseActivity"/>
     </application>
 
 </manifest>

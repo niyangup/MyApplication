@@ -13,12 +13,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
-import com.example.myapplication.activity.FrameActivity;
+import com.example.myapplication.json.activity.NativeJsonParseActivity;
+import com.example.myapplication.okhttp.activity.FrameActivity;
+
 
 public class FrameFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private ListView mListView;
-    private String[] data = {"OKHttp", "xUtils3", "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava", "volley", "Gson", "FastJson", "picasso", "evenBus", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
+    private String[] data = {"OKHttp", "nativeJsonParse", "Gson", "FastJson", "xUtils3", "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava", "volley", "picasso", "evenBus", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
 
     @Override
     public View initView() {
@@ -59,13 +61,19 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        TextView tv= (TextView) view;
-        if(i==0&&tv.getText().toString().equalsIgnoreCase("okhttp") ) {
-            Toast.makeText(mContext, "点击了第"+i+"个", Toast.LENGTH_SHORT).show();
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        Toast.makeText(mContext, "点击了第" + position + "个", Toast.LENGTH_SHORT).show();
+        TextView tv = (TextView) view;
+        String content = tv.getText().toString();
+        if (position == 0 && content.equalsIgnoreCase("okhttp")) {
             Intent intent = new Intent(mContext, FrameActivity.class);
             startActivity(intent);
+        } else if (position == 1 && content.equalsIgnoreCase("nativeJsonParse")) {
+            Intent intent = new Intent(mContext, NativeJsonParseActivity.class);
+            startActivity(intent);
         }
+
+
     }
 
     class MyAdapter extends BaseAdapter {
@@ -89,13 +97,13 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
         public View getView(int i, View view, ViewGroup viewGroup) {
             if (view == null) {
                 TextView tv = new TextView(mContext);
-                tv.setPadding(10,50,0,50);
-                view=tv;
+                tv.setPadding(10, 50, 0, 50);
+                view = tv;
                 tv.setTextSize(20);
                 tv.setTextColor(Color.BLACK);
                 tv.setText(data[i]);
-            }else{
-                TextView tv= (TextView) view;
+            } else {
+                TextView tv = (TextView) view;
                 tv.setTextSize(20);
                 tv.setTextColor(Color.BLACK);
                 tv.setText(data[i]);

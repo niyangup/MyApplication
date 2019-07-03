@@ -1,4 +1,4 @@
-package com.example.myapplication.activity;
+package com.example.myapplication.okhttp.activity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
-import com.example.myapplication.domain.DataBean;
-import com.example.myapplication.utils.CacheUtils;
+import com.example.myapplication.okhttp.domain.DataBean;
+import com.example.myapplication.okhttp.utils.CacheUtils;
 import com.google.gson.Gson;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.BitmapCallback;
