@@ -305,6 +305,7 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
                 .execute(new BitmapCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
+                        
                         mTvContent.setText("onError:" + e.getMessage());
                     }
 

@@ -16,8 +16,6 @@ import com.example.myapplication.fragment.ThirdFragment;
 import java.util.ArrayList;
 
 public class MainActivity extends FragmentActivity {
-
-
     private RadioGroup mRg;
     private ArrayList<BaseFragment> mFragmentList;
 
