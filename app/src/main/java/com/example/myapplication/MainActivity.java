@@ -19,7 +19,7 @@ public class MainActivity extends FragmentActivity {
 
 
     private RadioGroup mRg;
-    private List<BaseFragment> mFragmentList;
+    private ArrayList<BaseFragment> mFragmentList;
 
     private int position = 0;
 
