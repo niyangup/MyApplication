@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 //在主线程运行
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
@@ -27,4 +28,10 @@ public class SplashActivity extends AppCompatActivity {
         }, 2000);
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
 }

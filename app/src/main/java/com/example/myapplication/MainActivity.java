@@ -19,7 +19,7 @@ public class MainActivity extends FragmentActivity {
 
 
     private RadioGroup mRg;
-    private ArrayList<BaseFragment> mFragmentList;
+    private List<BaseFragment> mFragmentList;
 
     private int position = 0;
 
@@ -42,7 +42,9 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void initFragmentList() {
+
         mFragmentList = new ArrayList<>();
+
         mFragmentList.add(new FrameFragment());
         mFragmentList.add(new ThirdFragment());
         mFragmentList.add(new CustomFragment());

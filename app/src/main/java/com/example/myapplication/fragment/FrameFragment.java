@@ -97,7 +97,7 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
         public View getView(int i, View view, ViewGroup viewGroup) {
             if (view == null) {
                 TextView tv = new TextView(mContext);
-                tv.setPadding(10, 50, 0, 50);
+                tv.setPadding(10, 35, 0, 35);
                 view = tv;
                 tv.setTextSize(20);
                 tv.setTextColor(Color.BLACK);
