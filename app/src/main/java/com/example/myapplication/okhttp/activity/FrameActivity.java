@@ -44,8 +44,9 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
     /**
      * 测试url
      */
-//    private String url = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
-    private String url = "http://192.168.0.101/read.txt";
+    private String url = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
+    //树莓派服务器
+//    private String url = "http://192.168.0.101/read.txt";
     private String TAG = FrameActivity.class.getSimpleName();
     private Button mBtnOKutils;
     private ProgressBar mProgressBar;
@@ -112,7 +113,8 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
             public void run() {
                 super.run();
                 try {
-                    final String result = postMethod(url, "");
+//                    final String result = postMethod(url, "");
+                    final String result = getMethod(url);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
