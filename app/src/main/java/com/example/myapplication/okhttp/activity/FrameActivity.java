@@ -44,7 +44,8 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
     /**
      * 测试url
      */
-    private String url = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
+//    private String url = "http://api.m.mtime.cn/PageSubArea/TrailerList.api";
+    private String url = "http://192.168.0.101/read.txt";
     private String TAG = FrameActivity.class.getSimpleName();
     private Button mBtnOKutils;
     private ProgressBar mProgressBar;
@@ -305,7 +306,7 @@ public class FrameActivity extends AppCompatActivity implements View.OnClickList
                 .execute(new BitmapCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
-                        
+
                         mTvContent.setText("onError:" + e.getMessage());
                     }
 
