@@ -20,6 +20,7 @@ public class MainActivity extends FragmentActivity {
     private ArrayList<BaseFragment> mFragmentList;
 
     private int position = 0;
+    private int count=0;
 
     /**
      * 要显示的Fragment
@@ -35,7 +36,6 @@ public class MainActivity extends FragmentActivity {
         initFragmentList();
         //初始化布局
         initView();
-
 
     }
 

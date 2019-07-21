@@ -34,8 +34,6 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
 
 
         initSRefresh(mSRefresh);
-
-
         return view;
     }
 
