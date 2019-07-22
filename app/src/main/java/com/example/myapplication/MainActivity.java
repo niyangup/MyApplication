@@ -20,6 +20,7 @@ public class MainActivity extends FragmentActivity {
     private ArrayList<BaseFragment> mFragmentList;
 
     private int position = 0;
+    
     private int count=0;
 
     /**
