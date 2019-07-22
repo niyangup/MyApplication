@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".butterknife.ButterKnifeActivity"></activity>
+        <activity android:name=".eventbus.EventBusSendActivity"></activity>
+        <activity android:name=".eventbus.EventbusActivity" />
+        <activity android:name=".butterknife.ButterKnifeActivity" />
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" />
