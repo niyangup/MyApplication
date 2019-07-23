@@ -17,12 +17,13 @@ import com.example.myapplication.butterknife.ButterKnifeActivity;
 import com.example.myapplication.eventbus.EventbusActivity;
 import com.example.myapplication.json.activity.NativeJsonParseActivity;
 import com.example.myapplication.okhttp.activity.FrameActivity;
+import com.example.myapplication.recyclerview.RecyclerViewActivity;
 
 
 public class FrameFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private ListView mListView;
-    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "Gson", "FastJson", "xUtils3", "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava", "volley", "picasso", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
+    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "Gson", "RecyclerView", "FastJson", "xUtils3", "Retrofit2", "Fresco", "Glide", "greenDao", "RxJava", "volley", "picasso", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
 
     @Override
     public View initView() {
@@ -76,6 +77,9 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
             startActivity(intent);
         } else if (content.equalsIgnoreCase("evenBus")) {
             Intent intent = new Intent(mContext, EventbusActivity.class);
+            startActivity(intent);
+        } else if (content.equalsIgnoreCase("RecyclerView")) {
+            Intent intent = new Intent(mContext, RecyclerViewActivity.class);
             startActivity(intent);
         }
 

@@ -117,11 +117,6 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-//    private void switchFrament(Fragment fragment) {
-//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//        transaction.replace(R.id.fl_content, fragment);
-//        transaction.commit();
-//    }
 
 
 }

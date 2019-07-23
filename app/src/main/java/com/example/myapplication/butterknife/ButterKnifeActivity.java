@@ -16,11 +16,11 @@ import butterknife.OnClick;
 public class ButterKnifeActivity extends Activity {
 
     @BindView(R.id.tv_title)
-    TextView mTvTitle;
+    public TextView mTvTitle;
     @BindView(R.id.cb_knife)
-    CheckBox mCb;
+    public CheckBox mCb;
     @BindView(R.id.btn_knife)
-    Button mBtn;
+    public Button mBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

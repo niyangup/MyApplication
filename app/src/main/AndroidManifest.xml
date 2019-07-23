@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".eventbus.EventBusSendActivity"></activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".eventbus.EventBusSendActivity" />
         <activity android:name=".eventbus.EventbusActivity" />
         <activity android:name=".butterknife.ButterKnifeActivity" />
         <activity
