@@ -3,6 +3,7 @@ package com.example.myapplication.recyclerview;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -64,6 +65,10 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
 
             }
         });
+
+        //可以在此更改Item动画
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
         mRecyclerView.setAdapter(mAdapter);
     }
 
