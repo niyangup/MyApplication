@@ -3,6 +3,7 @@ package com.example.myapplication.recyclerview;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -32,6 +33,8 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
 
     private List<String> mList;
 
+    private MyAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,13 +46,25 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
         //初始化数据
         initData();
 
+        //添加分割线
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
         //设置方向,默认定位第0条,无论是否反转
         mRecyclerView.setLayoutManager(new LinearLayoutManager(RecyclerViewActivity.this, LinearLayoutManager.VERTICAL, false));
 
         //设置进入时定位的第最后一条
-//        mRecyclerView.scrollToPosition(mList.size() - 1);
+        //mRecyclerView.scrollToPosition(mList.size() - 1);
 
-        mRecyclerView.setAdapter(new MyAdapter());
+
+        mAdapter = new MyAdapter();
+
+        setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, String data) {
+
+            }
+        });
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     private void initData() {
@@ -85,11 +100,12 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
         switch (v.getId()) {
             //添加
             case R.id.btn_add:
-
+                mAdapter.addData(0, "NEW_CONTENT");
+                mRecyclerView.scrollToPosition(0);
                 break;
             //删除
             case R.id.btn_delete:
-
+                mAdapter.removeData(0);
                 break;
             //list
             case R.id.btn_list:
@@ -106,8 +122,17 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
         }
     }
 
-    public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+    public static interface OnItemClickListener {
+        public void onItemClick(View view, String data);
+    }
 
+    private OnItemClickListener onItemClickListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         //相当于getView中的创建布局部分
         @NonNull
@@ -131,10 +156,25 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
             return mList.size();
         }
 
+        public void addData(int postion, String data) {
+            //集合加一
+            mList.add(postion, data);
 
+            //适配器item增加后刷新
+            notifyItemInserted(postion);
+        }
+
+        public void removeData(int position) {
+            //集合减一
+            mList.remove(position);
+
+            //适配器item减少后刷新
+            notifyItemRemoved(position);
+        }
     }
 
-    static class MyViewHolder extends RecyclerView.ViewHolder {
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView mIvIcon;
         public TextView mTvData;
 
@@ -142,7 +182,18 @@ public class RecyclerViewActivity extends Activity implements View.OnClickListen
             super(itemView);
             mIvIcon = itemView.findViewById(R.id.iv_icon);
             mTvData = itemView.findViewById(R.id.tv_content);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+//                    Toast.makeText(RecyclerViewActivity.this, "this is " + getLayoutPosition(), Toast.LENGTH_SHORT).show();
+                    if (onItemClickListener != null) {
+                        onItemClickListener.onItemClick(v, mList.get(getLayoutPosition()));
+                    }
+                }
+            });
         }
+
     }
 
 

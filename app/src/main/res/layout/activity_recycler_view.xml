@@ -14,49 +14,51 @@
         android:orientation="horizontal">
 
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="添加" />
+            android:text="添加"
+            android:textAllCaps="false" />
 
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="删除" />
+            android:text="删除"
+            android:textAllCaps="false" />
 
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="List" />
+            android:text="List"
+            android:textAllCaps="false" />
 
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_grid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Grid" />
+            android:text="Grid"
+            android:textAllCaps="false" />
 
         <Button
-            android:textAllCaps="false"
             android:id="@+id/btn_flow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="flow" />
+            android:text="flow"
+            android:textAllCaps="false" />
     </LinearLayout>
+
+    <!--使用全类名-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycleview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>
