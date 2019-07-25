@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".glide.GlideActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <include layout="@layout/title_bar" />
+
+    <Button
+        android:id="@+id/btn_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="基本方法" />
+
+    <Button
+        android:id="@+id/btn_list_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView中加载图片" />
+
+    <Button
+        android:id="@+id/btn_change_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片变换" />
+
+</LinearLayout>

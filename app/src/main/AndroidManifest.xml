@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".glide.GlideChangeActivity"></activity>
+        <activity android:name=".glide.GlideRecyclerViewActivity" />
+        <activity android:name=".glide.GlideBaseActivity" />
+        <activity android:name=".glide.GlideActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity android:name=".eventbus.EventBusSendActivity" />
         <activity android:name=".eventbus.EventbusActivity" />
         <activity android:name=".butterknife.ButterKnifeActivity" />
