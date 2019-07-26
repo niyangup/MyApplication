@@ -20,7 +20,6 @@ android {
     }
 
 
-
 }
 
 allprojects {
@@ -56,4 +55,6 @@ dependencies {
     // If you want to use the GPU Filters
 //    implementation 'jp.co.cyberagent.android:gpuimage:2.0.0'
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+
+    implementation 'com.facebook.fresco:webpsupport:0.12.0'
 }
