@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.banner.activity.BannerMainActivity;
 import com.example.myapplication.butterknife.ButterKnifeActivity;
 import com.example.myapplication.eventbus.EventbusActivity;
 import com.example.myapplication.glide.GlideActivity;
@@ -24,7 +25,7 @@ import com.example.myapplication.recyclerview.RecyclerViewActivity;
 public class FrameFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private ListView mListView;
-    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "Gson", "RecyclerView", "Glide", "FastJson", "xUtils3", "Retrofit2", "Fresco", "greenDao", "RxJava", "volley", "picasso", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "....."};
+    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "RecyclerView", "Glide", "Banner", "FastJson", "xUtils3", "Retrofit2", "Fresco", "greenDao", "RxJava", "volley", "picasso", "jcvideoplayer", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "Gson", "....."};
 
     @Override
     public View initView() {
@@ -67,10 +68,10 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
         Toast.makeText(mContext, "点击了第" + position + "个", Toast.LENGTH_SHORT).show();
         TextView tv = (TextView) view;
         String content = tv.getText().toString();
-        if (position == 0 && content.equalsIgnoreCase("okhttp")) {
+        if (content.equalsIgnoreCase("okhttp")) {
             Intent intent = new Intent(mContext, FrameActivity.class);
             startActivity(intent);
-        } else if (position == 1 && content.equalsIgnoreCase("nativeJsonParse")) {
+        } else if (content.equalsIgnoreCase("nativeJsonParse")) {
             Intent intent = new Intent(mContext, NativeJsonParseActivity.class);
             startActivity(intent);
         } else if (content.equalsIgnoreCase("butterKnife")) {
@@ -85,8 +86,13 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
         } else if (content.equalsIgnoreCase("Glide")) {
             Intent intent = new Intent(mContext, GlideActivity.class);
             startActivity(intent);
+        } else if (content.equalsIgnoreCase("Banner")) {
+            Intent intent = new Intent(mContext, BannerMainActivity.class);
+            startActivity(intent);
+
         }
 
+        
 
     }
 

@@ -16,7 +16,8 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Fresco.FrescoActivity"></activity>
+        <activity android:name=".banner.activity.BannerMainActivity"></activity>
+        <activity android:name=".Fresco.FrescoActivity" />
         <activity android:name=".glide.GlideChangeActivity" />
         <activity android:name=".glide.GlideRecyclerViewActivity" />
         <activity android:name=".glide.GlideBaseActivity" />
