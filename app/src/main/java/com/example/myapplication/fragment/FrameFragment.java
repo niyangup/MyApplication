@@ -68,7 +68,7 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
         Toast.makeText(mContext, "点击了第" + position + "个", Toast.LENGTH_SHORT).show();
         TextView tv = (TextView) view;
         String content = tv.getText().toString();
-        if (content.equalsIgnoreCase("okhttp")) {
+        if (position == 1 && content.equalsIgnoreCase("okhttp")) {
             Intent intent = new Intent(mContext, FrameActivity.class);
             startActivity(intent);
         } else if (content.equalsIgnoreCase("nativeJsonParse")) {
@@ -89,10 +89,7 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
         } else if (content.equalsIgnoreCase("Banner")) {
             Intent intent = new Intent(mContext, BannerMainActivity.class);
             startActivity(intent);
-
         }
-
-        
 
     }
 
