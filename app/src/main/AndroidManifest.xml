@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".banner.activity.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,8 +17,10 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".banner.activity.BannerMainActivity"></activity>
-        <activity android:name=".Fresco.FrescoActivity" />
+        <activity android:name=".banner.activity.BannerMainActivity" />
+        <activity android:name=".banner.activity.BannerAnimationActivity" />
+        <activity android:name=".banner.activity.BannerStyleActivity" />
+
         <activity android:name=".glide.GlideChangeActivity" />
         <activity android:name=".glide.GlideRecyclerViewActivity" />
         <activity android:name=".glide.GlideBaseActivity" />
@@ -39,7 +42,6 @@
         <activity android:name=".okhttp.activity.FrameActivity" />
         <activity android:name=".okhttp.activity.OKHttpImageListActivity" />
         <activity android:name=".json.activity.NativeJsonParseActivity" />
-        <activity android:name=".Fresco.activity.FrescoSpimgActivity" />
     </application>
 
 </manifest>
