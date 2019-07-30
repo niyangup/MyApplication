@@ -111,10 +111,10 @@ public class BannerMainActivity extends AppCompatActivity implements SwipeRefres
                 startActivity(new Intent(this, BannerStyleActivity.class));
                 break;
             case 3:
-//                startActivity(new Intent(this, IndicatorPositionActivity.class));
+                startActivity(new Intent(this, IndicatorPositionActivity.class));
                 break;
             case 4:
-//                startActivity(new Intent(this, CustomBannerActivity.class));
+                startActivity(new Intent(this, CustomBannerActivity.class));
                 break;
         }
     }
