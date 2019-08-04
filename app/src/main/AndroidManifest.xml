@@ -17,13 +17,31 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+
+
+        <activity android:name=".jiecaovideoplayer.activity.JCListViewActivity" />
+
+        <activity
+            android:name=".jiecaovideoplayer.activity.JCVideoPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecaovideoplayer.activity.ListViewViewpagerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".jiecaovideoplayer.activity.ListViewMultiHolderActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".jiecaovideoplayer.activity.ListViewNormalActivity" />
+
+
         <activity android:name=".banner.activity.BannerMainActivity" />
         <activity android:name=".banner.activity.BannerAnimationActivity" />
         <activity android:name=".banner.activity.BannerStyleActivity" />
         <activity android:name=".banner.activity.IndicatorPositionActivity" />
         <activity android:name=".banner.activity.CustomBannerActivity" />
-
-
         <activity android:name=".glide.GlideChangeActivity" />
         <activity android:name=".glide.GlideRecyclerViewActivity" />
         <activity android:name=".glide.GlideBaseActivity" />
