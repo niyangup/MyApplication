@@ -42,9 +42,9 @@ public class JCListViewActivity extends AppCompatActivity implements View.OnClic
             case R.id.multi_holder_list:
                 startActivity(new Intent(JCListViewActivity.this, ListViewMultiHolderActivity.class));
                 break;
-//            case R.id.recyleview:
-//                startActivity(new Intent(JCListViewActivity.this, RecyclerViewNormalActivity.class));
-//                break;
+            case R.id.recyleview:
+                startActivity(new Intent(JCListViewActivity.this, RecyclerViewNormalActivity.class));
+                break;
         }
     }
 

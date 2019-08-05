@@ -111,12 +111,12 @@ public class JCVideoPlayerActivity extends AppCompatActivity implements View.OnC
             case R.id.about_listview:
                 startActivity(new Intent(this, JCListViewActivity.class));
                 break;
-//            case R.id.about_ui:
-//                startActivity(new Intent(this, UISmallChangeActivity.class));
-//                break;
-//            case R.id.about_webview:
-//                startActivity(new Intent(this, WebViewActivity.class));
-//                break;
+            case R.id.about_ui:
+                startActivity(new Intent(this, UISmallChangeActivity.class));
+                break;
+            case R.id.about_webview:
+                startActivity(new Intent(this, WebViewActivity.class));
+                break;
         }
     }
 }
