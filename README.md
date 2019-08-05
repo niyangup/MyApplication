@@ -16,3 +16,5 @@ OKHttpUtils非常适合用于文本数据的请求,文本数据的上传以及(�
 使用Banner实现循环播放多个广告图片和手动滑动循环
 </br>
 使用JCVideoPlayer让视频全屏播放和浮层小窗播放
+</br>
+使用CountDownView进行倒计时秒杀
