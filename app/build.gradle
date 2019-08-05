@@ -52,17 +52,15 @@ dependencies {
 
 
     implementation 'jp.wasabeef:glide-transformations:2.0.1'
-    // If you want to use the GPU Filters
-//    implementation 'jp.co.cyberagent.android:gpuimage:2.0.0'
+
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
 
     implementation 'com.youth.banner:banner:1.4.10'
-//    implementation 'com.facebook.fresco:fresco:0.12.0'{
-//        exclude module: 'support-v4'
-//        exclude group: 'com.android.support'
-//    }
+
     implementation 'com.zxy.android:recovery:1.0.0'
 
-//    implementation 'fm.jiecao:jiecaovideoplayer:3.6.1'
     implementation 'com.github.open-android:JieCaoVideoPlayer:0.1.0'
+
+    implementation 'com.github.iwgang:countdownview:2.1.6'
+    implementation 'cn.qqtheme.framework:ColorPicker:1.1.3'
 }
