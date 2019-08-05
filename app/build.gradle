@@ -63,4 +63,7 @@ dependencies {
 
     implementation 'com.github.iwgang:countdownview:2.1.6'
     implementation 'cn.qqtheme.framework:ColorPicker:1.1.3'
+    implementation project(path: ':opendanmaku')
+
+//    implementation 'com.linsea:opendanmaku:1.0.0@aar'
 }

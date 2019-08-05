@@ -17,7 +17,8 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".countdownview.CountDownViewActivity"></activity>
+        <activity android:name=".opendanmaku.activity.OpenDanMakuActivity"></activity>
+        <activity android:name=".countdownview.CountDownViewActivity" />
         <activity android:name=".jiecaovideoplayer.activity.JCListViewActivity" />
         <activity
             android:name=".jiecaovideoplayer.activity.JCVideoPlayerActivity"
@@ -70,10 +71,9 @@
         <activity android:name=".okhttp.activity.FrameActivity" />
         <activity android:name=".okhttp.activity.OKHttpImageListActivity" />
         <activity android:name=".json.activity.NativeJsonParseActivity" />
-
-        <activity android:name=".countdownview.DynamicShowActivity"/>
-        <activity android:name=".countdownview.CountdownViewListViewActivity"/>
-        <activity android:name=".countdownview.CountdownViewRecyclerViewActivity"/>
+        <activity android:name=".countdownview.DynamicShowActivity" />
+        <activity android:name=".countdownview.CountdownViewListViewActivity" />
+        <activity android:name=".countdownview.CountdownViewRecyclerViewActivity" />
     </application>
 
 </manifest>

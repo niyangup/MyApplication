@@ -1,1 +1,1 @@
-include ':app', ':sample-okhttp', ':okhttputils', ':banner', ':banner_app'
+include ':app', ':sample-okhttp', ':okhttputils', ':banner', ':banner_app', ':sample_opendanmaku', ':opendanmaku', ':sample-OpenDanmaku'
