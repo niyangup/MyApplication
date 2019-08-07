@@ -29,7 +29,7 @@ import com.example.myapplication.tablayout.activity.TabLayoutActivity;
 public class FrameFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private ListView mListView;
-    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "RecyclerView", "Glide", "Banner", "Jcvideoplayer", "CountDownView", "Opendanmaku", "TabLayout", "FastJson", "xUtils3", "Retrofit2", "Fresco", "greenDao", "RxJava", "volley", "picasso", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "Gson", "....."};
+    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "RecyclerView", "Glide", "Banner", "Jcvideoplayer", "CountDownView", "Opendanmaku", "TabLayout", "....."};
 
     @Override
     public View initView() {
