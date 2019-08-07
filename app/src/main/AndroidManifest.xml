@@ -17,7 +17,8 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".opendanmaku.activity.OpenDanMakuActivity"></activity>
+        <activity android:name=".tablayout.activity.TabLayoutActivity"></activity>
+        <activity android:name=".opendanmaku.activity.OpenDanMakuActivity" />
         <activity android:name=".countdownview.CountDownViewActivity" />
         <activity android:name=".jiecaovideoplayer.activity.JCListViewActivity" />
         <activity

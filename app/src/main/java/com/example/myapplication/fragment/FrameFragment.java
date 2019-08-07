@@ -23,12 +23,13 @@ import com.example.myapplication.json.activity.NativeJsonParseActivity;
 import com.example.myapplication.okhttp.activity.FrameActivity;
 import com.example.myapplication.opendanmaku.activity.OpenDanMakuActivity;
 import com.example.myapplication.recyclerview.RecyclerViewActivity;
+import com.example.myapplication.tablayout.activity.TabLayoutActivity;
 
 
 public class FrameFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private ListView mListView;
-    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "RecyclerView", "Glide", "Banner", "Jcvideoplayer", "CountDownView", "Opendanmaku", "FastJson", "xUtils3", "Retrofit2", "Fresco", "greenDao", "RxJava", "volley", "picasso", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "Gson", "....."};
+    private String[] data = {"OKHttp", "nativeJsonParse", "ButterKnife", "EvenBus", "RecyclerView", "Glide", "Banner", "Jcvideoplayer", "CountDownView", "Opendanmaku", "TabLayout", "FastJson", "xUtils3", "Retrofit2", "Fresco", "greenDao", "RxJava", "volley", "picasso", "pulltorefresh", "Expandablelistview", "UniversalVideoView", "Gson", "....."};
 
     @Override
     public View initView() {
@@ -100,6 +101,9 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
             startActivity(intent);
         } else if (content.equalsIgnoreCase("Opendanmaku")) {
             Intent intent = new Intent(mContext, OpenDanMakuActivity.class);
+            startActivity(intent);
+        } else if (content.equalsIgnoreCase("TabLayout")) {
+            Intent intent = new Intent(mContext, TabLayoutActivity.class);
             startActivity(intent);
         }
 
