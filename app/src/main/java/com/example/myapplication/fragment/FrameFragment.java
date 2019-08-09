@@ -69,7 +69,6 @@ public class FrameFragment extends BaseFragment implements AdapterView.OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        Toast.makeText(mContext, "点击了第" + position + "个", Toast.LENGTH_SHORT).show();
         TextView tv = (TextView) view;
         String content = tv.getText().toString();
         if (content.equalsIgnoreCase("okhttp")) {
