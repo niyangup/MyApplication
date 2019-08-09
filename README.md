@@ -9,6 +9,8 @@ OKHttpUtils非常适合用于文本数据的请求,文本数据的上传以及(�
 
 使用ButterKnife对控件进行注解,快速初始化
 </br>
+使用EventBus发送(粘性)和接收(粘性)事件
+</br>
 使用RecyclerView完成List,Grid和瀑布流的列表
 </br>
 使用Glide加载网络,资源,本地等图片
